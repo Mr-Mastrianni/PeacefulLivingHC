@@ -6,6 +6,8 @@ export const BUSINESS_NAME = "Peaceful Living Home Care LLC";
 export const PHONE_DISPLAY = "317-600-7994";
 export const PHONE_TEL = "tel:3176007994";
 export const EMAIL = "Peacefullivinghc@outlook.com";
+export const FORMSPREE_ID = "mzddbpgw"; // You will need to get this ID from Formspree
+export const CONTACT_PERSON = "Lynda Knight";
 export const CAREERS_LINK = "https://14002.axiscare.com";
 
 export const SERVICES: Service[] = [
@@ -15,6 +17,7 @@ export const SERVICES: Service[] = [
   { id: '4', title: 'Assistance with Activities of Daily Living (ADLs)', description: 'Help with personal care tasks to promote independence.' },
   { id: '5', title: 'Social Interaction', description: 'Encouragement and companionship to enhance well-being.' },
   { id: '6', title: 'Errand Running', description: 'Support with grocery shopping and other errands.' },
+  { id: '7', title: 'Structured Family Care', description: 'Specialized programs empowering families to provide care at home with professional support.' },
 ];
 
 export const LogoIcon = ({ className = "w-12 h-12", id = "logo-grad" }: { className?: string; id?: string }) => (
@@ -26,26 +29,26 @@ export const LogoIcon = ({ className = "w-12 h-12", id = "logo-grad" }: { classN
         <stop offset="100%" stopColor="#fb923c" />
       </linearGradient>
     </defs>
-    
+
     {/* The Heart - Centered above the valley of the two houses */}
-    <path 
-      d="M200,225 C200,225 185,185 150,185 C115,185 95,210 95,240 C95,275 135,310 200,350 C265,310 305,275 305,240 C305,210 285,185 250,185 C215,185 200,225 200,225 Z" 
-      stroke={`url(#${id})`} 
-      strokeWidth="12" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <path
+      d="M200,225 C200,225 185,185 150,185 C115,185 95,210 95,240 C95,275 135,310 200,350 C265,310 305,275 305,240 C305,210 285,185 250,185 C215,185 200,225 200,225 Z"
+      stroke={`url(#${id})`}
+      strokeWidth="12"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       transform="translate(0, -100)"
     />
 
     {/* The Two Houses - Connected at the center */}
-    <path 
-      d="M70,260 V200 L145,135 L200,190 L255,135 L330,200 V260" 
-      stroke={`url(#${id})`} 
-      strokeWidth="14" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <path
+      d="M70,260 V200 L145,135 L200,190 L255,135 L330,200 V260"
+      stroke={`url(#${id})`}
+      strokeWidth="14"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
-    
+
     {/* Shared Center Wall */}
     <path d="M200,190 V260" stroke={`url(#${id})`} strokeWidth="14" strokeLinecap="round" />
 

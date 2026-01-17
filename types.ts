@@ -8,5 +8,8 @@ export interface Service {
 export enum Page {
   Home = 'home',
   About = 'about',
+  Services = 'services',
+  Resources = 'resources',
   Contact = 'contact'
 }
+

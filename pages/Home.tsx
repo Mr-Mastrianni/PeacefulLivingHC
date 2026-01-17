@@ -1,9 +1,11 @@
 
 import React, { useEffect, useRef } from 'react';
+
 import Hero from '../components/Hero';
 import PeacefulPath from '../components/PeacefulPath';
 import AboutSection from '../components/AboutSection';
 import ContactSection from '../components/ContactSection';
+import VideoShowcase from '../components/VideoShowcase';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -21,7 +23,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <div id="home-section">
         <Hero onCtaClick={() => onNavigate('contact')} />
       </div>
-      
+
+      <VideoShowcase />
+
       <div id="path-section">
         <PeacefulPath onContactClick={() => onNavigate('contact')} />
       </div>

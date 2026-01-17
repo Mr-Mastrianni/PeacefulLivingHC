@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo & Name */}
-          <div 
+          <div
             className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => onPageChange('home')}
           >
@@ -32,13 +32,12 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
-            {['home', 'about', 'contact'].map((page) => (
+            {['home', 'services', 'about', 'resources', 'contact'].map((page) => (
               <button
                 key={page}
                 onClick={() => onPageChange(page)}
-                className={`text-xs font-bold uppercase tracking-[0.25em] transition-all duration-200 relative group ${
-                  currentPage === page ? 'text-purple-600' : 'text-slate-500 hover:text-purple-500'
-                }`}
+                className={`text-xs font-bold uppercase tracking-[0.25em] transition-all duration-200 relative group ${currentPage === page ? 'text-purple-600' : 'text-slate-500 hover:text-purple-500'
+                  }`}
               >
                 {page === 'contact' ? 'Contact Us' : page}
                 <span className={`absolute -bottom-1 left-0 w-full h-0.5 gradient-accent transform origin-left transition-transform duration-300 ${currentPage === page ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-50'}`}></span>
@@ -48,18 +47,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
 
           {/* CTAs */}
           <div className="flex items-center space-x-6">
-            <a 
-              href={PHONE_TEL} 
+            <a
+              href={PHONE_TEL}
               className="hidden lg:flex items-center text-slate-700 hover:text-purple-600 font-bold text-sm transition-colors"
             >
               <PhoneIcon className="mr-2 w-4 h-4 text-purple-600" />
               {PHONE_DISPLAY}
             </a>
             <button
-               onClick={() => onPageChange('contact')}
-               className="gradient-accent text-white px-7 py-3 rounded-full text-xs font-extrabold shadow-lg hover:shadow-purple-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              onClick={() => onPageChange('contact')}
+              className="gradient-accent text-white px-7 py-3 rounded-full text-xs font-extrabold shadow-lg hover:shadow-purple-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              Get Care Plan
+              Request Home Assessment
             </button>
           </div>
         </div>
